@@ -1,0 +1,42 @@
+import {
+	IAuthenticateGeneric,
+	ICredentialTestRequest,
+	ICredentialType,
+	INodeProperties,
+} from 'n8n-workflow';
+
+export class NotsyApi implements ICredentialType {
+	name = 'notsyApi';
+
+	displayName = 'Notsy API';
+
+	documentationUrl = 'https://facturacion.notsy.com.mx/developers';
+
+	properties: INodeProperties[] = [
+		{
+			displayName: 'API Key',
+			name: 'apiKey',
+			type: 'string',
+			typeOptions: { password: true },
+			default: '',
+			required: true,
+			description: 'Your Notsy API key (format ntsy_...), generated in your business dashboard',
+		},
+	];
+
+	authenticate: IAuthenticateGeneric = {
+		type: 'generic',
+		properties: {
+			headers: {
+				Authorization: '=Bearer {{$credentials.apiKey}}',
+			},
+		},
+	};
+
+	test: ICredentialTestRequest = {
+		request: {
+			baseURL: 'https://facturacion-api.notsy.com.mx',
+			url: '/agent/whoami',
+		},
+	};
+}
