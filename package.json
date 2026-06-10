@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-notsy",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "n8n node for Notsy: issue Mexican CFDI 4.0 invoices and resolve SAT catalog keys with your API key.",
   "keywords": [
     "n8n-community-node-package",

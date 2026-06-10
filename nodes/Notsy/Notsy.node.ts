@@ -2,7 +2,7 @@ import { INodeType, INodeTypeDescription } from 'n8n-workflow';
 
 export class Notsy implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Notsy Facturación',
+		displayName: 'Notsy',
 		name: 'notsy',
 		icon: 'file:notsy.svg',
 		group: ['transform'],
@@ -337,7 +337,7 @@ export class Notsy implements INodeType {
 				type: 'number',
 				default: 0,
 				required: true,
-				description: 'Coeficiente de utilidad from last year (taxable profit divided by nominal income)',
+				description: 'Profit coefficient ("coeficiente de utilidad") from last year, taxable profit divided by nominal income',
 				displayOptions: { show: { operation: ['reporteIsr'] } },
 				routing: { send: { type: 'query', property: 'coeficiente' } },
 			},
