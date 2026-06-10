@@ -27,6 +27,11 @@ In n8n (self-hosted): **Settings → Community Nodes → Install** → `n8n-node
   `uso_cfdi`, and more.
 - **Preview Invoice** — validate and calculate totals without stamping or cost (dry run).
 - **Issue CFDI** — issue and stamp an official CFDI 4.0 with the SAT.
+- **Cancel CFDI** — cancel an issued CFDI with the SAT (reasons 01-04).
+- **Find Invoices** / **Get Invoice Status** — list invoices or read one invoice's status.
+- **Find Customers** / **Create Customer** — search saved customers or upsert one (reusable ID).
+- **Get VAT Report** — cash-flow VAT (IVA) report for a period.
+- **Get Income Tax Report** — provisional ISR for Mexican legal entities (personas morales).
 - **My Account** — view the permissions, limits and usage of your API key.
 
 ## Credentials
