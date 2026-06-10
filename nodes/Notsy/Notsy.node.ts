@@ -2,7 +2,7 @@ import { INodeType, INodeTypeDescription } from 'n8n-workflow';
 
 export class Notsy implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Notsy',
+		displayName: 'Notsy Facturación',
 		name: 'notsy',
 		icon: 'file:notsy.svg',
 		group: ['transform'],
